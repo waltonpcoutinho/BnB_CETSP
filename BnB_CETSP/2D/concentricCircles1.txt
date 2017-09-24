@@ -1,0 +1,26 @@
+//Column order: x, y, z, radius, node demand (for the Close-Enough VRP)
+//The depot's (x,y,z) is given at file's end
+//See pp. 1-2 of "Results Discussion CETSP.pdf" for a more thorough description
+
+100 90 0 3 12
+104 90.8348486101 0 3 12
+107 92.8585715715 0 3 12
+109.4 96.5882555782 0 3 12
+110 100 0 3 12
+109.4 103.4117444218 0 3 12
+107 107.1414284285 0 3 12
+104 109.1651513899 0 3 12
+100 110 0 3 12
+96 109.1651513899 0 3 12
+93 107.1414284285 0 3 12
+90.6 103.4117444218 0 3 12
+90 100 0 3 12
+90.6 96.5882555782 0 3 12
+93 92.8585715715 0 3 12
+96 90.8348486101 0 3 12
+
+//Depot is 100, 100, 0
+//Max demand = 12
+//Total demand = 192
+//Avg. demand per node = 12
+//capacity per vehicle for a no-dist-lim 4-veh solution: 48 so use 50

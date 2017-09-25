@@ -6,19 +6,6 @@ using namespace std;
 Data::Data ( char * instanceName, char * options, double overlapFactor, int argc, char** argv )
 {	
 
-   // Carregando dados de entrada 
-   if ( argc < 9 ) {
-      cout << "Faltando parametros\n";
-      cout << "./exeCETSP [path da Instancia] [OPTIONS] [OVERLAP FACTOR] [TIME LIMIT] [BRANCHING RULE] [BRANCHING STRATEGY] [ROOT SELECTION] [S.B SIZE]" << endl;	
-      exit( 1 );
-   }
-
-   if ( argc > 9 ) {
-      cout << "Excesso de parametros\n";
-      cout << "./exeCETSP [path da Instancia] [OPTIONS] [OVERLAP FACTOR] [TIME LIMIT] [BRANCHING RULE] [BRANCHING STRATEGY] [ROOT SELECTION] [S.B SIZE]" << endl;	
-      exit( 1 );
-   }
-
    if ( strcmp( argv[ 2 ], "2D" ) && strcmp( argv[ 2 ], "3D" ) ){
       cout << "There's no option named: " << argv[ 2 ] << endl;
       cout << "CHOOSE 2D OR 3D" << endl;
@@ -62,11 +49,11 @@ Data::Data ( char * instanceName, char * options, double overlapFactor, int argc
 
    // Load data from file
    if ( !readFile ){
-      cerr << " Deu pau pra abrir o arquivo .txt ... " << endl;
+      cerr << "Problem for openning instance file!" << endl;
       exit( 1 );
    }
 
-   //		identify reader by directory name
+   // identify reader by directory name
    string str = instanceName;
    string DirectoryName;
 

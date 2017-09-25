@@ -45,6 +45,13 @@ long double somaTeste = 0;
 
 int main(int argc, char** argv) 
 {
+   // Check input 
+   if ( argc != 9 ) {
+      cout << "Wrong calling command\n";
+      cout << "./exeCETSP [path da Instancia] [OPTIONS] [OVERLAP FACTOR] [TIME LIMIT] [BRANCHING RULE] [BRANCHING STRATEGY] [ROOT SELECTION] [S.B SIZE]" << endl;	
+      exit( 1 );
+   }
+
    char *arqInstancia, *option;
    arqInstancia = argv[ 1 ];
    option = argv[ 2 ];

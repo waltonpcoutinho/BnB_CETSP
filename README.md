@@ -2,9 +2,19 @@
 
 A branch-and-bound algorithm for the CETSP.
 
-## Calling command:
-
 This is a prototype code that has not been developed for distribution.
+
+## Building an executable
+
+To build an executable, run the following command from the project root directory "BnB_CETSP":
+```
+make
+```
+Please, note that:
+ * You will need to edit the makefile in order to fix the correct path to your CPLEX installation.
+ * You will need to install the "GMP MP Bignum Library" (https://gmplib.org/) in order to run this code.
+
+## Calling command:
 
 The code can be run by using the following command structure
 ```
